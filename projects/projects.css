@@ -1,0 +1,217 @@
+body, html {
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    padding: 0;
+    margin: 0;
+    line-height: 1.6;
+    height: 100%;
+    width: 100%;
+    background-color: #42454a;
+    overflow:scroll ;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    text-wrap: nowrap;
+    text-align: justify;
+}
+/*landing area*/
+.top {
+    position: sticky; 
+    width: 100%;
+    height: 100vh;
+    display: block;
+    z-index: 0;
+    font-size: 1rem;
+    padding: 0;
+    text-align: center;
+    scroll-behavior: smooth;
+}
+.extraLayer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: block;
+    padding: 0;
+    text-align: center;
+    scroll-behavior: smooth;
+}
+.topper {
+    background: url('/Users/faisal/Library/Mobile%20Documents/com~apple~CloudDocs/Projects/Airoplanes_club/pics/aeroplane.png') center/cover no-repeat;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display:block;
+    padding-left: 0;
+    margin: 0;
+}
+.slogan {
+    position: absolute;
+    backdrop-filter: blur(5px);
+    color: #000;
+    text-wrap: nowrap;
+    top: 30%;
+    opacity: 1;
+    width: 100%;
+    height: auto;
+    padding-top: max(15px,30px);
+    text-overflow: ellipsis;
+    font-size: 2rem;
+    margin-bottom: 0;
+    z-index: 1;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+.clubName {
+    display: block;
+    position: absolute;
+    margin-top: 10%;
+    transform: translate(50%, -50%);
+    width: 50%;
+    height: 5%;
+    grid-template-columns: repeat(12, minmax(20px, 1fr)); /* Adjust grid columns */
+    z-index: 2;
+    font-size: 2rem;
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-align: center;
+    transition: height 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+/* nav bar styles */
+.nav_bar {
+    width: 100vw;
+    display: flex;
+    height: auto;
+    align-items: center;
+    position: fixed;
+    z-index: 3;
+    padding-top: min(100px, 5vh);
+    padding-bottom: 1vh;
+    top: 0;
+}
+
+.list1 {
+    list-style-type: none;
+    margin: 0 auto;
+    margin-top: 2vh;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.home,
+.Competiton,
+.Sponsors,
+.join,
+.projects,
+.contact {
+    margin-left: 2%;
+}
+
+button {
+    width: auto;
+    margin-top: 1%;
+    background-color: transparent;
+    color: black;
+    border: none;
+    padding: 1vh 2vh;
+    text-align: center;
+    text-decoration: none;
+    font-size: min(1.5vw, 1.5rem);
+    cursor: pointer;
+    border-radius: 30px;
+    text-wrap: nowrap;
+}
+
+button:hover {
+    background-color: transparent;
+    border: 1px solid black;
+    border-bottom: none;
+    border-top: none;
+    transform: scale(1.1);
+    border-radius: 30px;
+    text-shadow: none;
+}
+
+@media screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    .nav_bar {
+        padding-top: min(50px, 5vh);
+    }
+    
+    .list1 {
+        flex-wrap: wrap;
+    }
+
+    .home,
+    .Competiton,
+    .Sponsors,
+    .join,
+    .projects,
+    .contact {
+        margin-left: 0;
+        margin-top: 1vh;
+    }
+
+    button {
+        padding: 1vh 1.5vh;
+        font-size: 1rem;
+    }
+}
+/* main area */
+
+.container {
+    display: grid;
+    flex-wrap: wrap;
+    background-color: rgba(170, 170, 170, 1);
+    position: relative;
+    width: 100%;
+    height:100vh;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    gap: 40px;
+}
+.title{
+    background-color: rgba(170, 170, 170, 1);
+    backdrop-filter: blur(5px);
+    color: transparent;
+    text-shadow: 0 1px 1px rgba(255,255,255,1);
+    mix-blend-mode: multiply;
+    position: absolute;
+    font-size: 4rem;
+    text-align: center;
+    width: 100%;
+    height: 10%;
+    top: -16vh;
+}
+.container > div[class^="project"] {
+    margin-top: 5%;
+    position: relative;
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container > div[class^="project"]:hover {
+    scale: 1.1;
+}
+footer {
+    position: relative;
+    background-color: rgb(114, 114, 114);
+    color: black;
+    padding: 20px; /* Padding around the content */
+    text-align: center; /* Center align text */
+    z-index: 3;
+    display: block;
+}
+
+footer p {
+    margin: 5px 0; /* Add some margin between paragraphs */
+}
