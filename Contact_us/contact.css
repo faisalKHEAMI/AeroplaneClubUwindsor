@@ -35,7 +35,7 @@ body, html {
     scroll-behavior: smooth;
 }
 .topper {
-    background: url('faisalKHEAMI/AeroplaneClubUwindsor/blob/main/Pics/team_contact.JPG') center/cover no-repeat;
+    background: url('/Pics/team_contact.JPG') center/cover no-repeat;
     position: fixed;
     width: 100%;
     height: 100%;
