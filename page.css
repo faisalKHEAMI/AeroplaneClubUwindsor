@@ -37,7 +37,7 @@ body, html {
     scroll-behavior: smooth;
 }
 .topper {
-    background: url('pics/aeroplane.png') center/cover no-repeat;
+
     position: fixed;
     width: 100%;
     height: 100%;
