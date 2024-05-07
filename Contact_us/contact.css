@@ -1,16 +1,16 @@
 body, html {
-    font-family: "Rubik Mono One", monospace;
-    font-weight: 400;
-    font-style: normal;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     padding: 0;
     margin: 0;
-    line-height: 1.6;
     height: 100%;
     width: 100%;
     background-color: #42454a;
-    overflow:scroll;
+    overflow:scroll ;
+    overflow-x: hidden;
+    overflow-y: scroll;
     text-wrap: nowrap;
-    text-align: justify;
+
 }
 /*landing area*/
 .top {
@@ -45,11 +45,10 @@ body, html {
 }
 
 .clubName {
-
     display: block;
     position: absolute;
     margin-top: 10%;
-    transform: translate(50%, -50%);
+
     width: 50%;
     height: 5%;
     grid-template-columns: repeat(12, minmax(20px, 1fr)); /* Adjust grid columns */
@@ -70,8 +69,8 @@ body, html {
     padding-top: min(100px, 5vh);
     padding-bottom: 1vh;
     top: 0;
-}
 
+}
 .list1 {
     list-style-type: none;
     margin: 0 auto;
@@ -117,14 +116,69 @@ button:hover {
     text-shadow: none;
 }
 
+/* Contact section */
+.contact_section {
+    background-color: rgba(170, 170, 170, 1);
+    position: relative; /* Change to fixed */
+    width: 100%;
+    height: auto;
+
+    bottom: 0;
+    margin: 0;
+    padding: 5vh 5vw; /* Add padding */
+    box-sizing: border-box; /* Add box-sizing */
+    z-index: 2; /* Add z-index */
+    text-wrap: wrap; /* Add text-wrap */
+    text-align: center;
+}
+
+.contact_info {
+    margin-top: 20px;
+}
+
+.contact_info h1 {
+    font-size: 2rem;
+    margin-top: 20px; /* Add margin-top */
+    margin-bottom: 20px;
+}
+
+.contact_info p {
+    font-size: 1rem;
+    margin-top: 20px; /* Add margin-top */
+    margin-bottom: 10px;
+}
+footer {
+    position: relative;
+    background-color: rgb(114, 114, 114);
+    color: black;
+    padding: 20px; /* Padding around the content */
+    text-align: center; /* Center align text */
+    z-index: 3;
+    display: block;
+}
+
+footer p {
+    margin: 5px 0; /* Add some margin between paragraphs */
+}
+
+
 @media screen and (max-width: 768px) {
+
+    .clubName{
+        margin-top:10px;
+    }
     /* Adjust styles for smaller screens */
     .nav_bar {
-        padding-top: min(50px, 5vh);
+        padding-top: min(70px, 8vh);
+        left: 0;
+        width: 100%;
     }
     
-    .list1 {
-        flex-wrap: wrap;
+    .list1{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        grid-template-rows: auto auto; /* 2 rows */
+
     }
 
     .home,
@@ -141,46 +195,27 @@ button:hover {
         padding: 1vh 1.5vh;
         font-size: 1rem;
     }
-}
-/* Contact section */
-.contact_section {
-    background-color: rgba(170, 170, 170, 1);
-    position: relative; /* Change to fixed */
-    width: 100%;
-    height: auto;
-    text-align: center;
-    bottom: 0;
-    margin: 0;
-    padding: 10vh 5vw; /* Add padding */
-    box-sizing: border-box; /* Add box-sizing */
-    z-index: 2; /* Add z-index */
-}
-
-.contact_info {
-    margin-top: 20px;
-}
-
-.contact_info h1 {
-    font-size: 2rem;
-    margin-top: 20px; /* Add margin-top */
-    margin-bottom: 20px;
-}
-
-.contact_info p {
-    font-size: 1.2rem;
-    margin-top: 20px; /* Add margin-top */
-    margin-bottom: 10px;
-}
-footer {
-    position: relative;
-    background-color: rgb(114, 114, 114);
-    color: black;
-    padding: 20px; /* Padding around the content */
-    text-align: center; /* Center align text */
-    z-index: 3;
-    display: block;
-}
-
-footer p {
-    margin: 5px 0; /* Add some margin between paragraphs */
+    .contact_section{
+        height:max-content;
+        text-wrap: wrap;
+        display: block;
+        padding-bottom: 20px;
+        gap: 10%;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box; /* Add box-sizing */
+    }
+    .contact_info{
+        height:max-content;
+        text-wrap: wrap;
+        display: block;
+        padding-bottom: 20px;
+        left: 0;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .contact_info p{
+        font-size: 15px;
+        font-weight: lighter;
+    }
 }

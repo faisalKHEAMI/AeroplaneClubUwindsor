@@ -43,17 +43,15 @@ $(document).ready(function () {
 
             if (infoBehindNavBar < 39 && infoBehindNavBar > 33) {
 
-                saeTitle.css('margin-top', -infoBehindNavBar / 24 + '%');
+                saeTitle.css('margin-top', -infoBehindNavBar / 17 + '%');
 
-                const membersMargin = Math.max(infoBehindNavBar - 30, 0);
-                info.css('top', membersMargin + '%');
             }
 
             if (topOfInfo === 0) {
-                sponsors.add(button).add(navBarSize).add(info).add(saeTitle).add(listItem).add(join).add(button).add(listItem).add(contact).add(projects).add(navBar).add(home).add(Competiton).removeAttr('style');
+                sponsors.add(button).add(navBarSize).add(saeTitle).add(listItem).add(join).add(button).add(listItem).add(contact).add(projects).add(navBar).add(home).add(Competiton).removeAttr('style');
             }
             else if (infoBehindNavBar > 70) {
-                saeTitle.css('margin-top', -infoBehindNavBar / 24 + '%');
+                saeTitle.css('margin-top', -infoBehindNavBar / 17 + '%');
                 textElement.stop().animate({ 'margin-top': '0%' }, 500);
             }
 
